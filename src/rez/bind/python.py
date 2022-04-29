@@ -36,6 +36,7 @@ def post_commands():
     for dirname in os.listdir(path):
         path_ = os.path.join(path, dirname)
         env.PYTHONPATH.append(path_)
+    env.PYTHONPATH.append(os.path.join(path, "lib", "lib-dynload"))
 
 
 def bind(path, version_range=None, opts=None, parser=None):
